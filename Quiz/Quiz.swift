@@ -19,11 +19,9 @@ class Quiz {
         return questions[currentQuestionIndex]
     }
     
-    var currentQuestionNumber: Int {
+    var nextQuestionIndex: Int {
         return currentQuestionIndex + 1
     }
-    
-    
     
     init(questions: [Question]) {
         score = 0
@@ -32,7 +30,7 @@ class Quiz {
     }
     
     func next() {
-        currentQuestionIndex += 1
+        currentQuestionIndex = (currentQuestionIndex + 1) % questions.count
     }
     
     func reset() {

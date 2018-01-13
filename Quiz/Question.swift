@@ -11,4 +11,8 @@ import Foundation
 struct Question {
     let text: String
     let answers: [Answer]
+    
+    func check(answerIndex: Int) -> Bool {
+        return answers[answerIndex].isCorrect
+    }
 }
