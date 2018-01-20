@@ -14,10 +14,23 @@ class ScoreViewController: UIViewController {
     var score:Int = 0
     var total:Int = 0
     
+    @IBOutlet var feedbackLabel:UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scoreLabel.text = "\(score)/\(total)"
         scoreLabel.sizeToFit();
+        //Update this
+        
+        if(score >= 2) {
+            feedbackLabel.text = "Good Job!"
+        }else{
+            feedbackLabel.text = "Bad Job!"
+        }
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
     

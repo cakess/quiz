@@ -21,7 +21,7 @@
         <!--Title-->
         <scene sceneID="qoZ-JV-aUE">
             <objects>
-                <viewController title="Title" id="uWH-3z-Yge" customClass="StartViewController" customModule="Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Title" id="uWH-3z-Yge" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AUi-TV-jgo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,8 +34,7 @@
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="24"/>
                                 <state key="normal" title="Click here to start!"/>
                                 <connections>
-                                    <action selector="startQuizWithSender:" destination="uWH-3z-Yge" eventType="touchUpInside" id="CHD-mZ-ImD"/>
-                                    <segue destination="jfp-ZQ-44N" kind="show" identifier="bleh" id="Ugk-zm-Dvy"/>
+                                    <segue destination="jfp-ZQ-44N" kind="show" id="e8C-8w-dgf"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Ultimate Math Quiz!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abi-5Q-aez">
@@ -59,7 +58,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ldc-j2-egV"/>
                     </view>
-                    <navigationItem key="navigationItem" id="U1d-Yy-zc3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYe-C2-eHG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -114,14 +112,25 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EzG-h7-tNO">
+                                <rect key="frame" x="88" y="269.5" width="144" height="29.5"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question: &lt;INT&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-zE-oh4">
+                                <rect key="frame" x="88" y="461" width="144" height="29.5"/>
+                                <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fMp-Cv-F6E" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="87.5" id="6dX-9X-BHg"/>
                             <constraint firstItem="qeg-BM-sCP" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="-81.5" id="6w9-R3-sO1"/>
+                            <constraint firstItem="LNb-zE-oh4" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" id="9nc-Hz-Xsf"/>
                             <constraint firstItem="arw-fd-bNf" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="82" id="DtA-W7-kgr"/>
                             <constraint firstItem="jHZ-q6-ZUq" firstAttribute="top" secondItem="sPe-hT-oUo" secondAttribute="top" id="FXb-Uj-rIp"/>
                             <constraint firstItem="AQP-Q1-cFX" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-206" id="K8J-k8-dvB"/>
+                            <constraint firstItem="EzG-h7-tNO" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" id="OAQ-7w-4zh"/>
                             <constraint firstItem="jHZ-q6-ZUq" firstAttribute="leading" secondItem="d7p-L1-GBn" secondAttribute="leading" id="Rem-Xs-8wh"/>
                             <constraint firstItem="fMp-Cv-F6E" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-44" id="Rtx-ol-2FD"/>
                             <constraint firstItem="mil-fh-Lqb" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="-81.5" id="dl0-M9-kmN"/>
@@ -129,7 +138,9 @@
                             <constraint firstItem="jHZ-q6-ZUq" firstAttribute="trailing" secondItem="d7p-L1-GBn" secondAttribute="trailing" id="fMm-6j-FmQ"/>
                             <constraint firstItem="qeg-BM-sCP" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-44" id="g0c-dU-BKG"/>
                             <constraint firstItem="jHZ-q6-ZUq" firstAttribute="bottom" secondItem="d7p-L1-GBn" secondAttribute="bottom" id="gLe-Se-3uQ"/>
+                            <constraint firstItem="LNb-zE-oh4" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="191.75" id="n1a-n1-hWx"/>
                             <constraint firstItem="arw-fd-bNf" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="87.5" id="nnW-II-HKF"/>
+                            <constraint firstItem="EzG-h7-tNO" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" id="s57-lH-znn"/>
                             <constraint firstItem="mil-fh-Lqb" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="82" id="sX5-fM-oNE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d7p-L1-GBn"/>
@@ -140,7 +151,8 @@
                         <outlet property="button3" destination="mil-fh-Lqb" id="CXU-pb-9yu"/>
                         <outlet property="button4" destination="fMp-Cv-F6E" id="R5v-LW-36B"/>
                         <outlet property="questionLabel" destination="AQP-Q1-cFX" id="EfJ-PO-D7S"/>
-                        <segue destination="byR-RD-zRs" kind="show" identifier="scoreSegue" id="SqP-eQ-eeg"/>
+                        <outlet property="questionNumber" destination="LNb-zE-oh4" id="W2h-9e-xNi"/>
+                        <segue destination="byR-RD-zRs" kind="presentation" identifier="scoreSegue" modalTransitionStyle="flipHorizontal" id="SqP-eQ-eeg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcH-1J-89f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,33 +178,43 @@
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="30"/>
                                 <state key="normal" title="Restart"/>
                                 <connections>
-                                    <segue destination="uWH-3z-Yge" kind="show" identifier="restartSegue" id="iqp-Np-Tgs"/>
+                                    <segue destination="C4f-Bx-Z8g" kind="unwind" unwindAction="unwindToQuizViewControllerWithSegue:" id="MWC-nT-ArQ"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-3d-9bA">
                                 <rect key="frame" x="-1" y="-10" width="320" height="598"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Some Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-e1-VHd">
+                                <rect key="frame" x="96" y="377" width="129" height="51"/>
+                                <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="oJc-mR-DrD" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="-190.75" id="5aZ-NO-hd3"/>
                             <constraint firstItem="6GD-KG-BLe" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" id="9SG-G5-GuO"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="top" secondItem="HKs-G6-Sbf" secondAttribute="top" constant="-10" id="NoM-fH-SU6"/>
+                            <constraint firstItem="yT7-e1-VHd" firstAttribute="centerX" secondItem="HKs-G6-Sbf" secondAttribute="centerX" constant="0.5" id="QEr-mw-FGi"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="leading" secondItem="dQ2-qd-y3X" secondAttribute="leading" constant="-1" id="R57-aR-0YG"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="5" id="ToQ-Sg-87F"/>
                             <constraint firstItem="oJc-mR-DrD" firstAttribute="centerX" secondItem="HKs-G6-Sbf" secondAttribute="centerX" id="XcG-EK-lAr"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="trailing" secondItem="dQ2-qd-y3X" secondAttribute="trailing" constant="-1" id="ivC-9x-qKX"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="centerX" secondItem="HKs-G6-Sbf" secondAttribute="centerX" constant="-1" id="nTq-CC-dnP"/>
+                            <constraint firstItem="yT7-e1-VHd" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="118.5" id="rPX-Rb-2bM"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="bottom" secondItem="dQ2-qd-y3X" secondAttribute="bottom" constant="20" id="yEU-u1-uxc"/>
                             <constraint firstItem="6GD-KG-BLe" firstAttribute="centerX" secondItem="HKs-G6-Sbf" secondAttribute="centerX" id="yNZ-dR-Lij"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dQ2-qd-y3X"/>
                     </view>
                     <connections>
+                        <outlet property="feedbackLabel" destination="yT7-e1-VHd" id="rc1-do-Fu4"/>
                         <outlet property="scoreLabel" destination="oJc-mR-DrD" id="V8j-y1-6S7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWF-Ax-67B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="C4f-Bx-Z8g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1359.375" y="62.323943661971832"/>
         </scene>

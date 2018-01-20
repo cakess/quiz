@@ -17,6 +17,7 @@ class QuizViewController: UIViewController {
     @IBOutlet var button3: UIButton!
     @IBOutlet var button4: UIButton!
     
+    @IBOutlet var questionNumber: UILabel!
     /*
  
  
@@ -50,19 +51,25 @@ class QuizViewController: UIViewController {
                                Answer(text: "Not Correct", isCorrect: false)])
         ])
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        questionLabel.text = quiz.currentQuestion.text
+    func show(question: Question) {
+        questionNumber.text = "Question: \(quiz.currentQuestionIndex + 1)"
+        questionLabel.text = question.text
         questionLabel.sizeToFit();
         
-        button1.setTitle("a. \(quiz.currentQuestion.answers[0].text)", for: .normal)
-        button2.setTitle("b. \(quiz.currentQuestion.answers[1].text)", for: .normal)
-        button3.setTitle("c. \(quiz.currentQuestion.answers[2].text)", for: .normal)
-        button4.setTitle("d. \(quiz.currentQuestion.answers[3].text)", for: .normal)
+        button1.setTitle("a. \(question.answers[0].text)", for: .normal)
+        button2.setTitle("d. \(question.answers[1].text)", for: .normal)
+        button3.setTitle("c. \(question.answers[2].text)", for: .normal)
+        button4.setTitle("b. \(question.answers[3].text)", for: .normal)
         button1.sizeToFit()
         button2.sizeToFit()
         button3.sizeToFit()
         button4.sizeToFit()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        show(question: quiz.currentQuestion)
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -82,19 +89,10 @@ class QuizViewController: UIViewController {
         
         if(quiz.currentQuestionIndex < quiz.questions.count - 1){
             quiz.next()
-            updateView()
+            show(question: quiz.currentQuestion)
         }else{
             performSegue(withIdentifier: "scoreSegue", sender: nil)
         }
-    }
-    
-    func updateView(){
-        questionLabel.text = quiz.currentQuestion.text
-        
-        button1.setTitle("a. \(quiz.currentQuestion.answers[0].text)", for: .normal)
-        button2.setTitle("b. \(quiz.currentQuestion.answers[1].text)", for: .normal)
-        button3.setTitle("c. \(quiz.currentQuestion.answers[2].text)", for: .normal)
-        button4.setTitle("d. \(quiz.currentQuestion.answers[3].text)", for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -102,6 +100,12 @@ class QuizViewController: UIViewController {
         destVC.score = quiz.score
         destVC.total = quiz.questions.count
     }
+    
+    @IBAction func unwindToQuizViewController(segue: UIStoryboardSegue) {
+        quiz.reset()
+        show(question: quiz.currentQuestion)
+    }
+    
 }
 
 
