@@ -27,7 +27,7 @@ class ScoreViewController: UIViewController {
         if(score >= 2) {
             feedbackLabel.text = "Good Job!"
         }else{
-            feedbackLabel.text = "Bad Job!"
+            feedbackLabel.text = "Try Again!"
         }
         
         
