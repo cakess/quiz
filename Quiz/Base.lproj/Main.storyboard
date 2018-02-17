@@ -90,18 +90,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="jHZ-q6-ZUq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeg-BM-sCP">
-                                <rect key="frame" x="82" y="235" width="65" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question: &lt;INT&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-zE-oh4">
+                                <rect key="frame" x="115" y="157" width="144" height="30"/>
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="23"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="submitAnswerWithSender:" destination="jfp-ZQ-44N" eventType="touchUpInside" id="pH6-Wq-d0O"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mil-fh-Lqb">
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mil-fh-Lqb">
                                 <rect key="frame" x="74" y="381" width="65" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="23"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -109,45 +105,63 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AQP-Q1-cFX">
-                                <rect key="frame" x="169" y="73" width="63" height="38"/>
+                                <rect key="frame" x="169" y="51" width="63" height="38"/>
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question: &lt;INT&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNb-zE-oh4">
-                                <rect key="frame" x="128" y="20" width="144" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMp-Cv-F6E">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMp-Cv-F6E">
                                 <rect key="frame" x="244" y="235" width="65" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="23"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="submitAnswerWithSender:" destination="jfp-ZQ-44N" eventType="touchUpInside" id="NOR-7m-5no"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arw-fd-bNf">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arw-fd-bNf">
                                 <rect key="frame" x="244" y="381" width="65" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="23"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="submitAnswerWithSender:" destination="jfp-ZQ-44N" eventType="touchUpInside" id="ISM-rE-6yE"/>
                                 </connections>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QCC-Xh-ezq">
+                                <rect key="frame" x="112.5" y="189.5" width="150" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="5Nq-S5-QOM"/>
+                                    <constraint firstAttribute="width" constant="150" id="xRN-9X-m9L"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeg-BM-sCP">
+                                <rect key="frame" x="74" y="235.5" width="65" height="42"/>
+                                <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="23"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="submitAnswerWithSender:" destination="jfp-ZQ-44N" eventType="touchUpInside" id="pH6-Wq-d0O"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="QCC-Xh-ezq" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-140" id="0U1-ic-EEA"/>
+                            <constraint firstItem="LNb-zE-oh4" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" id="4SN-NY-HiK"/>
                             <constraint firstItem="jHZ-q6-ZUq" firstAttribute="trailing" secondItem="d7p-L1-GBn" secondAttribute="trailing" id="4bZ-qd-AvP"/>
-                            <constraint firstItem="AQP-Q1-cFX" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-241.5" id="CgP-rN-Wai"/>
+                            <constraint firstItem="qeg-BM-sCP" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-77" id="5xs-vN-qLX"/>
+                            <constraint firstItem="AQP-Q1-cFX" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-263.5" id="CgP-rN-Wai"/>
+                            <constraint firstItem="mil-fh-Lqb" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="-81" id="EOr-nV-wSU"/>
+                            <constraint firstItem="arw-fd-bNf" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="68.5" id="FVu-6t-h3R"/>
+                            <constraint firstItem="mil-fh-Lqb" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="68.5" id="KPm-59-BZ4"/>
                             <constraint firstAttribute="bottom" secondItem="jHZ-q6-ZUq" secondAttribute="bottom" id="Q2o-My-js1"/>
+                            <constraint firstItem="LNb-zE-oh4" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-161.5" id="YEF-tN-0fF"/>
                             <constraint firstItem="jHZ-q6-ZUq" firstAttribute="top" secondItem="sPe-hT-oUo" secondAttribute="top" id="a6x-tR-n1e"/>
                             <constraint firstItem="jHZ-q6-ZUq" firstAttribute="leading" secondItem="d7p-L1-GBn" secondAttribute="leading" id="bPw-ja-krC"/>
                             <constraint firstItem="AQP-Q1-cFX" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="13" id="gZn-vz-6mr"/>
+                            <constraint firstItem="fMp-Cv-F6E" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="89" id="iJw-by-apQ"/>
+                            <constraint firstItem="arw-fd-bNf" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="89" id="jPj-uS-YZz"/>
+                            <constraint firstItem="qeg-BM-sCP" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" constant="-81" id="ncI-to-pWm"/>
+                            <constraint firstItem="fMp-Cv-F6E" firstAttribute="centerY" secondItem="sPe-hT-oUo" secondAttribute="centerY" constant="-77.5" id="r17-Xp-sE2"/>
+                            <constraint firstItem="QCC-Xh-ezq" firstAttribute="centerX" secondItem="sPe-hT-oUo" secondAttribute="centerX" id="yjU-qc-OcH"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d7p-L1-GBn"/>
                     </view>
@@ -156,6 +170,7 @@
                         <outlet property="button2" destination="arw-fd-bNf" id="038-OK-7UL"/>
                         <outlet property="button3" destination="mil-fh-Lqb" id="CXU-pb-9yu"/>
                         <outlet property="button4" destination="fMp-Cv-F6E" id="R5v-LW-36B"/>
+                        <outlet property="progressBar" destination="QCC-Xh-ezq" id="NGH-aT-vw6"/>
                         <outlet property="questionLabel" destination="AQP-Q1-cFX" id="EfJ-PO-D7S"/>
                         <outlet property="questionNumber" destination="LNb-zE-oh4" id="W2h-9e-xNi"/>
                         <segue destination="byR-RD-zRs" kind="presentation" identifier="scoreSegue" modalTransitionStyle="flipHorizontal" id="SqP-eQ-eeg"/>
@@ -163,7 +178,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcH-1J-89f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654.375" y="62.323943661971832"/>
+            <point key="canvasLocation" x="653.60000000000002" y="61.619190404797607"/>
         </scene>
         <!--Results-->
         <scene sceneID="Y7R-75-DYd">
@@ -173,39 +188,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-3d-9bA">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GD-KG-BLe">
-                                <rect key="frame" x="150" y="287" width="89" height="50"/>
+                                <rect key="frame" x="150" y="282" width="89" height="50"/>
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="30"/>
                                 <state key="normal" title="Restart"/>
                                 <connections>
                                     <segue destination="C4f-Bx-Z8g" kind="unwind" unwindAction="unwindToQuizViewControllerWithSegue:" id="MWC-nT-ArQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-e1-VHd">
-                                <rect key="frame" x="123" y="413.5" width="129" height="39.5"/>
-                                <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJc-mR-DrD">
-                                <rect key="frame" x="158" y="82" width="81" height="38"/>
+                                <rect key="frame" x="158" y="67" width="86" height="41"/>
                                 <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yT7-e1-VHd">
+                                <rect key="frame" x="123.5" y="406" width="129" height="39.5"/>
+                                <fontDescription key="fontDescription" name="Acme-Regular" family="Acme" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paper" translatesAutoresizingMaskIntoConstraints="NO" id="fJh-3d-9bA">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="trailing" secondItem="dQ2-qd-y3X" secondAttribute="trailing" id="34d-m4-EoL"/>
-                            <constraint firstItem="6GD-KG-BLe" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="-21.5" id="9SG-G5-GuO"/>
+                            <constraint firstItem="6GD-KG-BLe" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="-26.5" id="9SG-G5-GuO"/>
                             <constraint firstItem="oJc-mR-DrD" firstAttribute="centerX" secondItem="HKs-G6-Sbf" secondAttribute="centerX" constant="11" id="DM5-vB-0cJ"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="leading" secondItem="dQ2-qd-y3X" secondAttribute="leading" id="PI2-ni-nKz"/>
                             <constraint firstItem="fJh-3d-9bA" firstAttribute="top" secondItem="HKs-G6-Sbf" secondAttribute="top" id="a1i-Ws-sow"/>
-                            <constraint firstItem="yT7-e1-VHd" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="99.75" id="eOw-Zz-zjQ"/>
-                            <constraint firstItem="oJc-mR-DrD" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="-232.5" id="fDU-eU-y8I"/>
+                            <constraint firstItem="yT7-e1-VHd" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="92.25" id="eOw-Zz-zjQ"/>
+                            <constraint firstItem="oJc-mR-DrD" firstAttribute="centerY" secondItem="HKs-G6-Sbf" secondAttribute="centerY" constant="-247.5" id="fDU-eU-y8I"/>
                             <constraint firstAttribute="bottom" secondItem="fJh-3d-9bA" secondAttribute="bottom" id="hZa-IR-79x"/>
                             <constraint firstItem="yT7-e1-VHd" firstAttribute="centerX" secondItem="HKs-G6-Sbf" secondAttribute="centerX" id="m62-SE-QLH"/>
                             <constraint firstItem="6GD-KG-BLe" firstAttribute="centerX" secondItem="HKs-G6-Sbf" secondAttribute="centerX" constant="7" id="yNZ-dR-Lij"/>

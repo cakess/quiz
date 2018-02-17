@@ -24,10 +24,10 @@ class ScoreViewController: UIViewController {
         scoreLabel.sizeToFit();
         //Update this
         
-        if(score >= 2) {
-            feedbackLabel.text = "Good Job!"
+        if(score >= 4) {
+            feedbackLabel.text = "Good Job! 🤓👍"
         }else{
-            feedbackLabel.text = "Try Again!"
+            feedbackLabel.text = "Try Again! 😥👎"
         }
         
         

@@ -16,6 +16,7 @@ class QuizViewController: UIViewController {
     @IBOutlet var button2: UIButton!
     @IBOutlet var button3: UIButton!
     @IBOutlet var button4: UIButton!
+    @IBOutlet var progressBar: UIProgressView!
     
     @IBOutlet var questionNumber: UILabel!
     /*
@@ -38,17 +39,40 @@ class QuizViewController: UIViewController {
             // Question: 2
             
             Question(text: "(18 * 2) + 36 / 2",
-                     answers: [Answer(text: "sure", isCorrect: true),
-                               Answer(text: "no", isCorrect: false),
-                               Answer(text: "no", isCorrect: false),
-                               Answer(text: "no", isCorrect: false)]),
+                     answers: [Answer(text: "54", isCorrect: true),
+                               Answer(text: "35", isCorrect: false),
+                               Answer(text: "36", isCorrect: false),
+                               Answer(text: "62", isCorrect: false)]),
             // Question: 3
             
-            Question(text: "Test3",
-                     answers: [Answer(text: "Not Correct", isCorrect: false),
-                               Answer(text: "Correct", isCorrect: true),
-                               Answer(text: "Not Correct", isCorrect: false),
-                               Answer(text: "Not Correct", isCorrect: false)])
+            Question(text: "5 * 5 / 5 + 5 - 10",
+                     answers: [Answer(text: "5", isCorrect: false),
+                               Answer(text: "10", isCorrect: false),
+                               Answer(text: "0", isCorrect: true),
+                               Answer(text: "-5", isCorrect: false)]),
+            
+            // Question: 4
+            
+            Question(text: "51 * 3",
+                     answers: [Answer(text: "171", isCorrect: false),
+                               Answer(text: "153", isCorrect: true),
+                               Answer(text: "136", isCorrect: false),
+                               Answer(text: "152", isCorrect: false)]),
+            // Question: 5
+            
+            Question(text: "Question 2s Answer?",
+                     answers: [Answer(text: "A", isCorrect: true),
+                               Answer(text: "B", isCorrect: false),
+                               Answer(text: "C", isCorrect: false),
+                               Answer(text: "D", isCorrect: false)]),
+            // Question: 6
+            
+            Question(text: "16 + 7 / 2.5",
+            answers: [Answer(text: "18", isCorrect: false),
+            Answer(text: "17.6", isCorrect: false),
+            Answer(text: "19", isCorrect: false),
+            Answer(text: "18.8", isCorrect: true)])
+            
         ])
     
     func show(question: Question) {
@@ -64,6 +88,11 @@ class QuizViewController: UIViewController {
         button2.sizeToFit()
         button3.sizeToFit()
         button4.sizeToFit()
+        
+        
+        //progressBar.progress = 0/6
+        progressBar.progress = Float(quiz.currentQuestionIndex) / 6
+        
     }
     
     override func viewDidLoad() {
@@ -72,6 +101,8 @@ class QuizViewController: UIViewController {
         show(question: quiz.currentQuestion)
         
         // Do any additional setup after loading the view, typically from a nib.
+        
+    
     }
     
     override func didReceiveMemoryWarning() {
